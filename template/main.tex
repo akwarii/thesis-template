@@ -1,20 +1,20 @@
 \documentclass[12pt,a4paper,twoside,french]{book}
-\input{others/preamble.tex}
+\input{config/preamble.tex}
 
 \begin{document}
 
 \frontmatter
 
-\input{others/titlepage.tex}
+\input{frontmatter/titlepage.tex}
 \forceoddpage
 
-\input{others/epigraph.tex}
+\input{frontmatter/epigraph.tex}
 \forceoddpage
 
-\input{others/abstract.tex}
+\input{frontmatter/abstract.tex}
 \forceoddpage
 
-\input{others/acknowledgements.tex}
+\input{frontmatter/acknowledgements.tex}
 \forceoddpage
 
 \tableofcontents
@@ -25,18 +25,19 @@
 \listoftables
 \addcontentsline{toc}{chapter}{Liste des tableaux}
 
-\input{others/abbreviations.tex}
+\input{frontmatter/abbreviations.tex}
 \forceoddpage
 
-\input{others/notations.tex}
+\input{frontmatter/notations.tex}
 \forceoddpage
 
 \mainmatter
 
-\input{chapter1/chapter1.tex}
-\input{chapter2/chapter2.tex}
-\input{chapter3/chapter3.tex}
-\input{chapter4/chapter4.tex}
-\input{chapter5/chapter5.tex}
+\input{introduction/introduction.tex}
+\input{chapters/all.tex}
+\input{conclusion/conclusion.tex}
+
+\appendix
+\input{appendices/all.tex}
 
 \end{document}
