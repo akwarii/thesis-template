@@ -1,0 +1,14 @@
+\newcommand{\forceoddpage}{%
+    \ifodd\value{page}\else
+        \clearpage
+        \thispagestyle{empty} % Ensures a blank page with no header/footer
+        \null
+        \clearpage
+    \fi
+}
+
+\addto\captionsenglish{%
+    \renewcommand{\contentsname}{Nom du sommaire}%
+    \renewcommand{\listfigurename}{Nom de la liste des figures}%
+    \renewcommand{\listtablename}{Nom de la liste des tables}%
+}

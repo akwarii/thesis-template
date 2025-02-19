@@ -1,43 +1,45 @@
-\documentclass[12pt,a4paper,twoside,french]{book}
+\documentclass[12pt,a4paper,twoside]{book}
+
 \input{config/preamble.tex}
+\addbibresource{bibliography.bib}
+
+% You can comment out the chapters you are not working on to speed up the compilation process
+% Note that you need to do a full compilation at least once to make sure it works correctly
+\includeonly{%
+    chapters/introduction.tex,
+    chapters/chapter_1.tex,
+    chapters/chapter_2.tex,
+    chapters/chapter_3.tex,
+    chapters/chapter_4.tex,
+    chapters/chapter_5.tex,
+    chapters/conclusion.tex,
+    appendices/appendix_A.tex,
+    appendices/appendix_B.tex,
+}
 
 \begin{document}
 
 \frontmatter
-
-\input{frontmatter/titlepage.tex}
-\forceoddpage
-
-\input{frontmatter/epigraph.tex}
-\forceoddpage
-
-\input{frontmatter/abstract.tex}
-\forceoddpage
-
-\input{frontmatter/acknowledgements.tex}
-\forceoddpage
-
-\tableofcontents
-
-\listoffigures
-\addcontentsline{toc}{chapter}{Liste des figures}
-
-\listoftables
-\addcontentsline{toc}{chapter}{Liste des tableaux}
-
-\input{frontmatter/abbreviations.tex}
-\forceoddpage
-
-\input{frontmatter/notations.tex}
-\forceoddpage
+\input{frontmatter/frontmatter.tex}
+\input{glossary/glossary.tex}
 
 \mainmatter
-
-\input{introduction/introduction.tex}
-\input{chapters/all.tex}
-\input{conclusion/conclusion.tex}
+\include{chapters/introduction.tex}
+\include{chapters/chapter_1.tex}
+\include{chapters/chapter_2.tex}
+\include{chapters/chapter_3.tex}
+\include{chapters/chapter_4.tex}
+\include{chapters/chapter_5.tex}
+\include{chapters/conclusion.tex}
 
 \appendix
-\input{appendices/all.tex}
+\include{appendices/appendix_A.tex}
+\include{appendices/appendix_B.tex}
+
+\backmatter
+\printbibliography[%
+    title={Titre de la bibliographie},
+    heading=bibintoc,
+]
 
 \end{document}

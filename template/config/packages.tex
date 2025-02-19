@@ -1,0 +1,82 @@
+% ----------------------------
+%  Encoding & Language
+% ----------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern} % Better fonts
+\usepackage[nottoc]{tocbibind} % Add Bibliography to ToC
+
+% ----------------------------
+% Template Packages
+% ----------------------------
+\usepackage{lipsum} % Dummy text
+
+% ----------------------------
+%  Layout & Formatting
+% ----------------------------
+\usepackage[%
+    a4paper,
+    top=2.5cm, bottom=2.5cm,
+    left=3cm, right=2.5cm,
+    bindingoffset=1cm,
+    twoside
+]{geometry}
+\usepackage{fancyhdr} % Custom headers & footers
+\usepackage{emptypage} % No headers/footers on empty pages
+\usepackage{currfile}  % Get current file path for resources
+\usepackage{todonotes} % todo notes in the margins
+
+% ----------------------------
+%  Math & Physics
+% ----------------------------
+\usepackage{amsmath, amssymb, amsthm, mathtools} % Core math packages
+\usepackage{physics}  % Derivatives, bras/kets, tensors, etc.
+\usepackage{tensor}   % Easy tensor notation
+\usepackage{siunitx}  % SI units and scientific notation
+\usepackage{cancel}   % Strike out terms in equations
+\usepackage{braket}   % Dirac notation for quantum mechanics
+
+% ----------------------------
+%  Graphics & Figures
+% ----------------------------
+\usepackage{graphicx} % Insert images
+\usepackage{subcaption} % Subfigures
+\usepackage{booktabs, multirow, tabularx} % Professional tables
+\usepackage{adjustbox} % Resize tables & figures easily
+\usepackage{epigraph}  % Epigraphs (quotes at chapter start)
+\usepackage{xcolor}    % Advanced color support
+\usepackage{tikz, pgfplots} % Drawings & scientific plots
+\pgfplotsset{compat=1.18}
+
+% ----------------------------
+%  Tables
+% ----------------------------
+\usepackage{array} % Extended table formatting
+\usepackage{multirow} % Multirow cells in tables
+\usepackage{colortbl} % Colored tables
+\usepackage{longtable} % Tables spanning multiple pages
+
+% ----------------------------
+%  Referencing & Hyperlinks
+% ----------------------------
+\usepackage{hyperref} % Clickable links
+\usepackage{bookmark} % Improves PDF bookmarks
+\usepackage{cleveref} % Smart referencing: \cref{label}
+
+% ----------------------------
+%  Algorithms & Code Listings
+% ----------------------------
+\usepackage{listings} % Code formatting
+\usepackage{minted}   % Better code highlighting (requires -shell-escape)
+\usepackage{algorithm, algpseudocode} % Algorithms and pseudocode
+
+% ----------------------------
+%  Bibliography
+% ----------------------------
+\usepackage{csquotes} % Context sensitive quotes for biblatex
+\usepackage[%
+    % backend=biber, % biber should be prefered over bibtex
+    backend=bibtex,
+    style=ieee,
+]{biblatex}
