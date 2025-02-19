@@ -1,0 +1,33 @@
+% --- Encoding ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+
+% --- Template only ---
+\usepackage{lipsum}
+
+% --- Layout ---
+\usepackage[
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=2.5cm,
+    bindingoffset=1cm,
+    twoside,
+]{geometry}
+
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{emptypage} % No headers/footers on empty pages
+
+% --- Custom Commands ---
+\newcommand{\forceoddpage}{%
+    \ifodd\value{page}\else
+        \clearpage
+        \thispagestyle{empty} % Ensures a blank page with no header/footer
+        \null
+        \clearpage
+    \fi
+}
