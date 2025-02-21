@@ -1,6 +1,26 @@
+% ----------------------------
+%  Tables & Figures
+% ----------------------------
+
+% Shortcuts for inserting tables and figures. It will automatically look
+% for the file in the correct resources/ subdirectory.
 \newcommand{\insertfigure}[2][]{%
     \includegraphics[#1]{resources/figures/\currfiledir\currfilebase/#2}
 }
 \newcommand{\inserttable}[1]{%
     \input{resources/tables/\currfiledir\currfilebase/#1}
+}
+
+% ----------------------------
+%  Formatting
+% ----------------------------
+
+% Will force the next page to be odd, useful for book printing.
+\newcommand{\forceoddpage}{%
+    \ifodd\value{page}\else
+        \clearpage
+        \thispagestyle{empty}
+        \null
+        \clearpage
+    \fi
 }

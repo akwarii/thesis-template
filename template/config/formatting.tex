@@ -1,14 +1,59 @@
-\newcommand{\forceoddpage}{%
-    \ifodd\value{page}\else
-        \clearpage
-        \thispagestyle{empty} % Ensures a blank page with no header/footer
-        \null
-        \clearpage
-    \fi
+% ----------------------------
+%  Page Layout
+% ----------------------------
+
+% Custom formatting.
+% Not applied to title page as it has its own geometry settings.
+\geometry{%
+    a4paper,
+    top=2.5cm, bottom=2.5cm,
+    left=3cm, right=2.5cm,
+    bindingoffset=1cm,
+    twoside,
 }
 
-\addto\captionsenglish{%
-    \renewcommand{\contentsname}{Nom du sommaire}%
-    \renewcommand{\listfigurename}{Nom de la liste des figures}%
-    \renewcommand{\listtablename}{Nom de la liste des tables}%
+% Line spacing
+\renewcommand{\baselinestretch}{1.05}
+
+% Paragraph formatting
+\setlength{\parindent}{1.5em}     % Indentation
+\setlength{\parskip}{0pt plus1pt} % Space between paragraphs
+
+% ----------------------------
+%  Headers & Footers
+% ----------------------------
+\pagestyle{fancy}
+
+% Clear default settings
+\fancyhf{}
+
+% Define header:
+\fancyhead[LE]{\leftmark}  % Chapter name on left pages (Even pages)
+\fancyhead[RO]{\rightmark} % Section name on right pages (Odd pages)
+
+% Define footer
+\fancyfoot[C]{\thepage} % Page number in center footer
+
+% \renewcommand{\headrulewidth}{0.4pt} % Thin line under header
+% \renewcommand{\footrulewidth}{0pt}   % No footer line
+
+% Ensure new chapters start on an odd page
+\let\oldchapter\chapter
+\renewcommand{\chapter}{%
+    \clearpage\thispagestyle{plain}
+    \oldchapter
 }
+
+% ----------------------------
+%  Table of Contents
+% ----------------------------
+\addto\captionsenglish{%
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
+}
+
+% ----------------------------
+%  Indexing
+% ----------------------------
+\makeindex[columns=2, title=Index, intoc]
