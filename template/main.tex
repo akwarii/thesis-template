@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside]{book}
+\documentclass[12pt,a4paper,twoside,english]{book}
 
 \input{config/preamble.tex}
 \addbibresource{bibliography.bib}
@@ -20,10 +20,12 @@
 \begin{document}
 
 \frontmatter
+\pagestyle{plain}
 \input{frontmatter/frontmatter.tex}
 \input{glossary/glossary.tex}
 
 \mainmatter
+\pagestyle{custom}
 \include{chapters/introduction.tex}
 \include{chapters/chapter_1.tex}
 \include{chapters/chapter_2.tex}
@@ -37,6 +39,7 @@
 \include{appendices/appendix_B.tex}
 
 \backmatter
+\pagestyle{plain}
 \printbibliography[%
     title={Titre de la bibliographie},
     heading=bibintoc,

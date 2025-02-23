@@ -1,11 +1,9 @@
 % ----------------------------
 %  Encoding & Language
 % ----------------------------
-\usepackage[utf8]{inputenc}    % Input encoding
-\usepackage[T1]{fontenc}       % Font encoding
-\usepackage[english]{babel}    % Language
-\usepackage{lmodern}           % Better fonts
-\usepackage[nottoc]{tocbibind} % Add Bibliography to ToC
+\usepackage[utf8]{inputenc} % Input encoding
+\usepackage[T1]{fontenc}    % Font encoding
+\usepackage{babel}          % Language
 
 % ----------------------------
 % Template Packages
@@ -15,14 +13,18 @@
 % ----------------------------
 %  Layout & Formatting
 % ----------------------------
-\usepackage{geometry}  % Page layout
-\usepackage{setspace}  % Line spacing
-\usepackage{fancyhdr}  % Custom headers & footers
-\usepackage{emptypage} % No headers/footers on empty pages
-\usepackage{currfile}  % Get current file path for resources
-\usepackage{epigraph}  % Epigraphs (quotes at chapter start)
-\usepackage{todonotes} % todo notes in the margins
-\usepackage{imakeidx}  % Index
+\usepackage{lmodern}    % Better fonts
+\usepackage{geometry}   % Page layout
+\usepackage{setspace}   % Line spacing
+\usepackage{fancyhdr}   % Custom headers & footers
+\usepackage{emptypage}  % No headers/footers on empty pages
+\usepackage{currfile}   % Get current file path for resources
+\usepackage{epigraph}   % Epigraphs (quotes at chapter start)
+\usepackage{todonotes}  % todo notes in the margins
+\usepackage{imakeidx}   % Index
+\usepackage[toc,xindy,acronym,nomain]{glossaries} % Glossary
+\usepackage[nottoc]{tocbibind} % Add Bibliography to ToC
+\usepackage[PetersLenny]{fncychap} % Chapter headings
 
 % ----------------------------
 %  Math & Physics
@@ -70,5 +72,5 @@
 \usepackage[%
     backend=biber, % biber should be prefered over bibtex
     % backend=bibtex,
-    style=ieee,
+    style=numeric-comp,
 ]{biblatex}
