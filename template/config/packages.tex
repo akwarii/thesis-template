@@ -21,8 +21,6 @@
 \usepackage{currfile}   % Get current file path for resources
 \usepackage{epigraph}   % Epigraphs (quotes at chapter start)
 \usepackage{todonotes}  % todo notes in the margins
-\usepackage{imakeidx}   % Index
-\usepackage[toc,xindy,acronym,nomain]{glossaries} % Glossary
 \usepackage[nottoc]{tocbibind} % Add Bibliography to ToC
 \usepackage[PetersLenny]{fncychap} % Chapter headings
 
@@ -36,6 +34,23 @@
 \usepackage{siunitx}   % SI units and scientific notation
 \usepackage{cancel}    % Strike out terms in equations
 \usepackage{braket}    % Dirac notation for quantum mechanics
+
+% ----------------------------
+%  Referencing & Hyperlinks
+% ----------------------------
+\usepackage{hyperref} % Clickable links
+\usepackage{bookmark} % Improves PDF bookmarks
+\usepackage{cleveref} % Smart referencing: \cref{label}
+
+% ----------------------------
+%  Index & Glossary
+% ----------------------------
+\usepackage{imakeidx}   % Index
+\usepackage[%
+    toc,
+    xindy,
+    nomain,
+]{glossaries} % Glossary
 
 % ----------------------------
 %  Graphics & Figures
@@ -52,13 +67,6 @@
 \usepackage{array}     % Extended table formatting
 \usepackage{multirow}  % Multirow cells in tables
 \usepackage{longtable} % Tables spanning multiple pages
-
-% ----------------------------
-%  Referencing & Hyperlinks
-% ----------------------------
-\usepackage{hyperref} % Clickable links
-\usepackage{bookmark} % Improves PDF bookmarks
-\usepackage{cleveref} % Smart referencing: \cref{label}
 
 % ----------------------------
 %  Algorithms & Code Listings
