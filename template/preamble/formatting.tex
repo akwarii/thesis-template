@@ -26,7 +26,6 @@
 
 % Define fancy headers and footers
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-% \renewcommand{\sectionmark}[1]{\markright{#1}}
 
 \fancypagestyle{custom}{%
     \fancyhf{}
@@ -59,21 +58,13 @@
     \renewcommand{\listfigurename}{Liste des Figures}
     \renewcommand{\listtablename}{Liste des Tableaux}
 }
+\setcounter{tocdepth}{1}
 
 % ----------------------------
 %  Indexing & Glossary
 % ----------------------------
 \makeindex[columns=2, title=Index, intoc]
 
-\addto\captionsfrench{%
-    \renewcommand*{\acronymname}{Abbréviations}
-}
-
-\makenoidxglossaries
-
 \newglossary[alg]{acronym}{acr}{acn}{\acronymname}
-\loadglsentries{glossary/abbreviations.tex}
-
 \newglossary[nlg]{notation}{not}{ntn}{Notations}
-\loadglsentries{glossary/notations.tex}
-
+\makeglossaries

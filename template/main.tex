@@ -1,42 +1,42 @@
 \documentclass[12pt,a4paper,twoside,french]{book}
 
-\input{config/preamble.tex}
+\input{preamble/preamble}
 \addbibresource{bibliography.bib}
 
 % You can comment out the chapters you are not working on to speed up the compilation process
 % Note that you need to do a full compilation at least once to make sure it works correctly
 \includeonly{%
-    chapters/introduction.tex,
-    chapters/chapter_1.tex,
-    chapters/chapter_2.tex,
-    chapters/chapter_3.tex,
-    chapters/chapter_4.tex,
-    chapters/chapter_5.tex,
-    chapters/conclusion.tex,
-    appendices/appendix_A.tex,
-    appendices/appendix_B.tex,
+    chapters/introduction,
+    chapters/chapter_1,
+    chapters/chapter_2,
+    chapters/chapter_3,
+    chapters/chapter_4,
+    chapters/chapter_5,
+    chapters/conclusion,
+    appendices/appendix_A,
+    appendices/appendix_B,
 }
 
 \begin{document}
 
 \frontmatter
 \pagestyle{plain}
-\input{frontmatter/frontmatter.tex}
-\printnoidxglossaries
+\input{frontmatter/frontmatter}
+\input{glossary/glossary}
 
 \mainmatter
 \pagestyle{custom}
-\include{chapters/introduction.tex}
-\include{chapters/chapter_1.tex}
-\include{chapters/chapter_2.tex}
-\include{chapters/chapter_3.tex}
-\include{chapters/chapter_4.tex}
-\include{chapters/chapter_5.tex}
-\include{chapters/conclusion.tex}
+\include{chapters/introduction}
+\include{chapters/chapter_1}
+\include{chapters/chapter_2}
+\include{chapters/chapter_3}
+\include{chapters/chapter_4}
+\include{chapters/chapter_5}
+\include{chapters/conclusion}
 
 \appendix
-\include{appendices/appendix_A.tex}
-\include{appendices/appendix_B.tex}
+\include{appendices/appendix_A}
+\include{appendices/appendix_B}
 
 \backmatter
 \pagestyle{plain}

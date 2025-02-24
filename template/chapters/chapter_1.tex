@@ -4,13 +4,25 @@
 
 \section{Première section}
 
-\insertfigure[width=0.9\textwidth]{logos.jpg}
+\begin{figure}
+    \centering
+    \insertfigure[width=0.9\textwidth]{logos.jpg}
+    \caption{Logo de l'université Lyon 1}
+    \label{fig:logo}
+\end{figure}
+
 
 \subsection{Sous-section}
 Vous remarquerez que les sous-sous-sections ne sont pas numérotées par défaut. C'est un choix de style\index{style}. Vous pouvez les numéroter en commentant la ligne \texttt{\\setcounter\{secnumdepth\}\{2\}} dans le fichier \texttt{preamble.tex}.
 
-\gls{not:set}
-\gls{ai}
+\gls{not:set} or \gls{ai}
+resources/figures/\currfiledir\currfilebase
+
+\begin{equation}
+    \label{eq:apb}
+    a = b + 1
+\end{equation}
+\eq{eq:apb} and \fig{fig:logo}
 
 \subsubsection{Sous-sous-section}
 \lipsum[1-8]
